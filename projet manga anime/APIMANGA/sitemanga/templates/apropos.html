@@ -1,0 +1,49 @@
+<!-- templates/apropos.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - API Manga</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'script/function.js' %}"></script>    
+</head>
+
+<body>
+    <div class="entete">
+        <div class="logo-container">
+            <img id="logo" src="{% static 'images/logo.webp' %}">
+        </div>
+        <nav class="menu" id="navbar">
+            <a class="menu_b" href="{% url 'animes' %}">Animes</a>
+            <a class="menu_b" href="{% url 'apropos' %}">À Propos</a>
+            <a class="menu_b" href="{% url 'faq' %}">FÀQ</a>
+            <a class="menu_b" href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </div>
+
+    <div id="page">
+        <section class="about-section">
+            <h2>À Propos de nous</h2>
+            <p>Bienvenue sur notre site, votre destination en ligne pour tous vos besoins en compléments alimentaires. Nous sommes spécialisés dans la fourniture de produits de haute qualité pour soutenir vos objectifs de fitness et de santé. Que vous soyez un athlète professionnel ou un amateur de fitness, nous avons ce qu'il vous faut pour améliorer vos performances et votre bien-être.</p>
+
+            <p>Nos produits incluent :</p>
+            <ul>
+                <li>Protéines</li>
+                <li>Créatine</li>
+                <li>BCAA</li>
+                <li>Pré-workout</li>
+                <li>Brûleurs de graisse</li>
+                <li>Boosters</li>
+            </ul>
+
+            <p>Nous nous engageons à fournir des produits sûrs, efficaces et fabriqués à partir des meilleurs ingrédients. Notre équipe est composée d'experts passionnés par le fitness et la nutrition, prêts à vous conseiller et à vous aider à choisir les produits qui vous conviennent le mieux.</p>
+
+            <p>Merci de nous faire confiance pour vos achats de compléments alimentaires. Nous sommes ici pour vous accompagner dans votre parcours vers une meilleure santé et une meilleure forme physique.</p>
+        </section>
+    </div>
+</body>
+
+</html>

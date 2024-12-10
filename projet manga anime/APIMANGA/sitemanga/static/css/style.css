@@ -1,0 +1,350 @@
+/* static/css/style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    background-color: #444;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    color: rgb(180, 0, 72);
+    font-family: Consolas;
+    font-size: 17px;
+    margin-left: 10%;
+    height: 64px;
+}
+
+.entete.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.menu_b {
+    margin-right: 20px;
+    cursor: pointer;
+    height: 40%;
+    flex: 1;
+    padding: 1%;
+    font-size: 130%;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.menu_b:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.entete {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: top 0.3s;
+}
+
+#logo {
+    display:flex;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    animation: rotateAndScale 1.5s linear infinite;
+}
+
+
+select {
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+#filtre {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid rgba(217, 217, 217, 0.5);
+    border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+    gap: 350px;
+    padding: 10px 0;
+}
+
+.filter,
+.tri,
+span,
+h4,
+label,
+#bA {
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+#filtre .filter {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+#filtre .tri {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+}
+
+#filtre span {
+    display: flex;
+    align-items: center;
+}
+
+#filtre .filter svg {
+    margin-right: 8px;
+}
+
+#filtre .filter .icon {
+    width: 16px;
+    height: 16px;
+}
+
+#filter-menu h3 {
+    margin-top: 0;
+}
+
+#filter-menu label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#filter-menu input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#filter-menu button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e04c00;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#filter-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+#filter-menu.open {
+    left: 0;
+}
+
+
+.category {
+    display: none;
+}
+
+#recherche {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+#searchInput {
+    width: calc(100% - 24px);
+    padding: 10px;
+    border: 2px solid #e04c00;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+#searchIcon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+#searchIcon svg {
+    width: 100%;
+    height: 100%;
+    fill: #000000;
+    cursor: pointer;
+}
+
+#searchIcon:hover svg {
+    fill: #333;
+}
+
+#haut{
+    margin-top:2%;
+}
+
+
+h3 {
+    font-size: small;
+}
+
+#listDiv {
+    width: 60%;
+    background: #ffffff44;
+    margin: 2% auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articles {
+    margin: 2%;
+    width: calc(25% - 4%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+/* Section principale du slider */
+.slider-section {
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1700px; 
+    position: relative;
+    height: 700px; 
+    overflow: hidden; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+/* Conteneur Swiper */
+.swiper-container {
+    width: 100%;
+    height: 100%; 
+}
+
+/* Slide individuelle */
+.swiper-slide {
+    position: relative;
+    overflow: hidden; /* Empêche le débordement */
+}
+
+/* Arrière-plan flou */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(7px); /* Ajoute un flou à l'image */
+    z-index: 1; /* Place l'image derrière le texte */
+}
+
+/* Bloc d'informations */
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour lisibilité */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 400px; /* Limite la largeur du bloc */
+    text-align: left;
+    z-index: 2; /* Place le texte au-dessus de l'image */
+}
+
+/* Style du titre */
+.info h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Style de la description */
+.info p {
+    margin: 0 0 10px;
+    font-size: 1em;
+    line-height: 1.5;
+    overflow: hidden; /* Empêche le débordement */
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte dépasse */
+}
+
+/* Style du score */
+.info span {
+    display: block;
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 10px;
+}
